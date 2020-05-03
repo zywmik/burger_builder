@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import classes from './Button.css';
 
-const button = ({btnType, clicked, children}) => (
+const button = ({btnType, clicked, children, disabled}) => (
   <button
+    disabled={disabled}
     className={[classes.Button, classes[btnType]].join(' ')}
     onClick={clicked}>{children}</button>
 );
